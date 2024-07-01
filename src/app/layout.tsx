@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Next application for learning about next-auth and drizzle orm and turso",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

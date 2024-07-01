@@ -1,6 +1,4 @@
-import { auth } from "auth";
-import Image from "next/image";
-import React from "react";
+import { auth } from "@/auth";
 
 const ProfilePage = async () => {
   const { user }: any = await auth();
@@ -10,7 +8,13 @@ const ProfilePage = async () => {
     <div>
       <h2>ProfilePage</h2>
       <h5>{user.name}</h5>
-      <img src={user.image} width={30} height={30} alt="profile image" />
+      <img
+        src={user.image}
+        width={30}
+        height={30}
+        alt="profile image"
+        className="rounded-full"
+      />
     </div>
   );
 };
