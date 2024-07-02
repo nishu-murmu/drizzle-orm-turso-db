@@ -4,7 +4,7 @@ import React from "react";
 
 const ProtectedLayout = async ({ children }: any) => {
   const session = await auth();
-  if (!session?.user.id) {
+  if (!session?.user?.name) {
     redirect("/login");
   }
   return <div>{children}</div>;
